@@ -1,0 +1,12 @@
+_ > nanoagent.plugin.v0001.ProductConfig:
+tagline: "Place papers in the 7 regions of a three-concept Venn diagram, checked paper by paper"
+summary: "GapMap shows research gaps as Venn diagrams of concepts. Pick a bundled dataset and three concepts, A, B and C, in the order you want them labeled. The agent places every paper that mentions at least one of them in exactly one of the 7 exclusive regions, from A only to all three, by exact string match, and leaves the rest out. It submits each region's sorted paper ids. The check recomputes the regions from the raw papers and scores the share of papers placed right, counting a paper wrongly included or wrongly left out as a miss."
+highlights:
+  - "Deterministic rules: every dataset and query has exactly one correct diagram"
+  - "Exclusive regions with exact matching: language model never counts as large language model"
+  - "Three bundled datasets: a smoke test, realistic NLP papers, and every boundary case"
+  - "The verifier names each misplaced paper with its expected and submitted region"
+steps:
+  - "Choose a dataset (small, standard or edge-cases) and three distinct concepts A, B and C"
+  - "The agent reads the papers and places each one that has any of the three in its region by hand"
+  - "See the 7 regions and every check of the verdict, with the papers that were misplaced"

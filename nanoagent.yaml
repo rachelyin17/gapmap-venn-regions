@@ -1,0 +1,42 @@
+_ > nanoagent.plugin.v0001.ManifestConfig:
+id: gapmap-venn-regions
+name: GapMap Venn Regions
+version: 0.1.0
+status: ready
+spec: nanoagent.plugin/v0001
+
+runtime > nanoagent.plugin.v0001.RuntimeConfig:
+  type: mcp_stdio
+  command: [uv, run, --frozen, python, -m, plugin]
+
+# The datasets are bundled: no network. The tools never write, but every plugin may write its workspace.
+permissions > nanoagent.plugin.v0001.PermissionsConfig:
+  network > nanoagent.plugin.v0001.NetworkConfig:
+    hosts: []
+  filesystem > nanoagent.plugin.v0001.FilesystemConfig:
+    write: [workspace]
+
+# One entry per contract.Tool; its input and output classes are contract.TOOLS's.
+tools > dict[contract.Tool, nanoagent.plugin.v0001.ToolConfig]:
+  pin_venn:
+    description: Pin the task's answer key, a bundled dataset's vocabulary and papers with the query a, b, c, and the 7 Venn regions the rules give; refuses invalid data, or query concepts that are not distinct or not in the vocabulary
+  get_papers:
+    description: Get a bundled dataset exactly as stored, its vocabulary (normalized concepts, unique and sorted) and its papers {paper_id, concepts}, sorted by paper_id, each with a sorted list of vocabulary concepts (possibly empty); no paper is placed in a region
+
+# One entry per contract.Task; its input class is contract.TASKS's.
+tasks > dict[contract.Task, nanoagent.plugin.v0001.TaskConfig]:
+  venn-regions:
+    description: Place every paper that mentions at least one of three concepts a, b and c into exactly one of the 7 exclusive regions of their Venn diagram, by which of the three it has, so that a research gap shows as an empty or sparse region
+    runner: agent
+    tools: [get_papers]
+    reference: pin_venn
+    instructions: |-
+      Task. Place each paper that has at least one of the task's concepts a, b and c into exactly one of the 7 regions of their Venn diagram, applying the rules below by hand. No tool computes regions for you.
+      Plan. Exactly two tool calls, nothing else: (1) get_papers with the task's dataset; (2) submit.
+      Rules.
+      V1. A paper has a concept only if that exact string is in its concepts list. There is no substring or partial match: "language model" does not match "large language model", and "llm" does not match "llms".
+      V2. A paper that has at least one of a, b and c goes into exactly one region, by which of them it has: only a → a_only; only b → b_only; only c → c_only; a and b but not c → ab_only; a and c but not b → ac_only; b and c but not a → bc_only; all three → abc. The order matters: a, b and c are the task's, as given, never re-sorted.
+      V3. A paper that has none of a, b and c is in no region.
+      V4. Each region lists its paper ids sorted ascending in Python's default string order (P10 comes before P2). An empty region is [].
+      Output. Submit {dataset, a, b, c, regions}. dataset, a, b and c are the task input's, copied unchanged. regions has all 7 lists: a_only, b_only, c_only, ab_only, ac_only, bc_only and abc.
+      Do not restate the rules. In your thinking, list only papers that have at least one of the three concepts, each with its region. Then immediately call submit with the full output.

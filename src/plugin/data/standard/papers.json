@@ -1,0 +1,116 @@
+{
+  "concepts": [
+    "chain of thought",
+    "dense retrieval",
+    "instruction tuning",
+    "large language model",
+    "question answering",
+    "reinforcement learning",
+    "retrieval augmented generation",
+    "summarization"
+  ],
+  "papers": [
+    {
+      "paper_id": "1810.04805",
+      "concepts": [
+        "question answering"
+      ]
+    },
+    {
+      "paper_id": "1910.10683",
+      "concepts": [
+        "question answering",
+        "summarization"
+      ]
+    },
+    {
+      "paper_id": "2004.04906",
+      "concepts": [
+        "dense retrieval",
+        "question answering"
+      ]
+    },
+    {
+      "paper_id": "2005.11401",
+      "concepts": [
+        "dense retrieval",
+        "question answering",
+        "retrieval augmented generation"
+      ]
+    },
+    {
+      "paper_id": "2005.14165",
+      "concepts": [
+        "large language model",
+        "question answering"
+      ]
+    },
+    {
+      "paper_id": "2009.01325",
+      "concepts": [
+        "reinforcement learning",
+        "summarization"
+      ]
+    },
+    {
+      "paper_id": "2109.01652",
+      "concepts": [
+        "instruction tuning",
+        "large language model"
+      ]
+    },
+    {
+      "paper_id": "2201.11903",
+      "concepts": [
+        "chain of thought",
+        "large language model"
+      ]
+    },
+    {
+      "paper_id": "2203.02155",
+      "concepts": [
+        "instruction tuning",
+        "large language model",
+        "reinforcement learning"
+      ]
+    },
+    {
+      "paper_id": "2205.11916",
+      "concepts": [
+        "chain of thought",
+        "large language model",
+        "question answering"
+      ]
+    },
+    {
+      "paper_id": "2208.03299",
+      "concepts": [
+        "dense retrieval",
+        "large language model",
+        "question answering",
+        "retrieval augmented generation"
+      ]
+    },
+    {
+      "paper_id": "2210.03629",
+      "concepts": [
+        "chain of thought",
+        "large language model",
+        "retrieval augmented generation"
+      ]
+    },
+    {
+      "paper_id": "2302.04761",
+      "concepts": [
+        "large language model"
+      ]
+    },
+    {
+      "paper_id": "2305.18290",
+      "concepts": [
+        "large language model",
+        "reinforcement learning"
+      ]
+    }
+  ]
+}

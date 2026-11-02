@@ -1,0 +1,106 @@
+{
+  "concepts": [
+    "graph neural network",
+    "language model",
+    "large language model",
+    "llm",
+    "llms",
+    "quantum computing",
+    "reasoning",
+    "retrieval",
+    "speech recognition",
+    "transformer",
+    "vision"
+  ],
+  "papers": [
+    {
+      "paper_id": "E1",
+      "concepts": [
+        "large language model",
+        "transformer"
+      ]
+    },
+    {
+      "paper_id": "E10",
+      "concepts": [
+        "llms",
+        "transformer",
+        "vision"
+      ]
+    },
+    {
+      "paper_id": "E11",
+      "concepts": [
+        "language model",
+        "retrieval",
+        "transformer"
+      ]
+    },
+    {
+      "paper_id": "E12",
+      "concepts": [
+        "language model",
+        "llm",
+        "transformer"
+      ]
+    },
+    {
+      "paper_id": "E2",
+      "concepts": [
+        "retrieval",
+        "transformer"
+      ]
+    },
+    {
+      "paper_id": "E3",
+      "concepts": [
+        "reasoning",
+        "transformer"
+      ]
+    },
+    {
+      "paper_id": "E4",
+      "concepts": [
+        "large language model",
+        "retrieval",
+        "transformer"
+      ]
+    },
+    {
+      "paper_id": "E5",
+      "concepts": [
+        "large language model",
+        "reasoning",
+        "transformer"
+      ]
+    },
+    {
+      "paper_id": "E6",
+      "concepts": [
+        "reasoning",
+        "retrieval",
+        "transformer"
+      ]
+    },
+    {
+      "paper_id": "E7",
+      "concepts": [
+        "large language model",
+        "reasoning",
+        "retrieval",
+        "transformer"
+      ]
+    },
+    {
+      "paper_id": "E8",
+      "concepts": []
+    },
+    {
+      "paper_id": "E9",
+      "concepts": [
+        "llm",
+        "transformer"
+      ]
+    }
+  ]
+}

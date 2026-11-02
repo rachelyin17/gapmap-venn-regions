@@ -1,0 +1,67 @@
+{
+  "concepts": [
+    "computer vision",
+    "deep learning",
+    "image classification",
+    "nlp",
+    "speech"
+  ],
+  "papers": [
+    {
+      "paper_id": "P1",
+      "concepts": [
+        "deep learning",
+        "nlp"
+      ]
+    },
+    {
+      "paper_id": "P2",
+      "concepts": [
+        "computer vision",
+        "deep learning"
+      ]
+    },
+    {
+      "paper_id": "P3",
+      "concepts": [
+        "deep learning",
+        "nlp",
+        "speech"
+      ]
+    },
+    {
+      "paper_id": "P4",
+      "concepts": [
+        "nlp"
+      ]
+    },
+    {
+      "paper_id": "P5",
+      "concepts": [
+        "computer vision",
+        "image classification"
+      ]
+    },
+    {
+      "paper_id": "P6",
+      "concepts": [
+        "deep learning"
+      ]
+    },
+    {
+      "paper_id": "P7",
+      "concepts": [
+        "nlp",
+        "speech"
+      ]
+    },
+    {
+      "paper_id": "P8",
+      "concepts": [
+        "computer vision",
+        "deep learning",
+        "nlp"
+      ]
+    }
+  ]
+}
